@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: "Sora", sans-serif;
+  font-weight: 500 !important;
+  font-size: 18px;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 15px;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  font-weight: inherit;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  i,
+  svg {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.085);
+  .list_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 30px;
+    .footer_list {
+      display: flex;
+      flex-direction: column;
+      div {
+        font-size: 20px;
+        opacity: 0.58;
+      }
+      a {
+        margin-top: 15px;
+      }
+    }
+  }
+  .copyright {
+    margin: 100px auto;
+    margin-top: 0;
+    div {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+      a {
+        &:nth-of-type(2) {
+          margin: 0 30px;
+        }
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: -0.015em !important;
+}
+
+i {
+  font-weight: 500;
+}
