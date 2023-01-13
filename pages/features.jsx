@@ -33,15 +33,27 @@ export default function Features() {
     },
     {
       icon: icons["chart_icon"](),
-      heading: "Finances Easy to Read",
+      heading: "Graphs & Charts",
       paragraph:
-        "Our Best in class design, coupled with a very fast and responsive codebase makes the app very easy and quick to use.",
+        "See your monthly expenses in a beautiful Pie Chart by categories. This way you'll understand how much money you spent and for what.",
     },
     {
       icon: icons["wallet_icon"](),
-      heading: "Completely Free",
+      heading: "Multiple Accounts ",
       paragraph:
-        "There are no hidden fees or charges - there is nothing to pay to use the app. We currenly run on donation model.",
+        "Track multiple bank accounts (including crypto ones) in one place. Record incomes, expenses, and transfers between them to efficiently manage your money.",
+    },
+    {
+      icon: icons["users_icon"](),
+      heading: "Community Driven",
+      paragraph:
+        "Ivy Wallet is fully community driven. We are open to any suggestions and feedback from the community.",
+    },
+    {
+      icon: icons["wallet_icon"](),
+      heading: "Multi-currency Support",
+      paragraph:
+        "Ivy Wallet supports 180+ currencies including all international (USD, EUR, GBP, etc) ones and the top 20 cryptocurrencies (e.g. BTC, ETH, ADA, SOL) to manage all of your assets with one money manager app.",
     },
   ];
 
@@ -105,22 +117,12 @@ export default function Features() {
         </div>
       </header>
 
-      <div
-        style={{
-          position: "relative",
-          pointerEvents: "none",
-          height: 500,
-          bottom: -100,
-          right: -30,
-        }}
-      >
-        <World />
-      </div>
       <div className={styles.about}>
         <div className={styles.heading}>
           <div>Why Ivy Wallet?</div>
           <div>
-            Discover, explore and visualize data to maximize your growth.
+            Discover, explore and visualize data to better understand your
+            finances.
           </div>
         </div>
         <p></p>
