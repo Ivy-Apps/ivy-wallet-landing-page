@@ -4,6 +4,9 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import { useRecoilValue } from "recoil";
 import { iconsState } from "../state";
+
+
+
 const World = dynamic(import("../components/world"), {
   ssr: false,
 });
@@ -13,7 +16,7 @@ export default function Index() {
   const links = ["About", "Features", "Roadmap", "Community", "FAQ"];
   const titleToLinkMap = {
     About: "/",
-    Features: "/",
+    Features: "/features",
     Roadmap: "https://github.com/orgs/Ivy-Apps/projects/1/views/1",
     Community: "https://t.me/+ETavgioAvWg4NThk",
     FAQ: "/",
