@@ -215,8 +215,12 @@ export default function Index() {
             <a>Why Ivy?</a>
             <a>Blog</a>
 
-            <a>Terms of use</a>
-            <a>Privacy policy</a>
+            <a href="https://github.com/ILIYANGERMANOV/privacy-policies/blob/master/ivy-wallet-tc.md">
+              Terms of use
+            </a>
+            <a href="https://github.com/ILIYANGERMANOV/privacy-policies/blob/master/ivy-wallet-privacy-policy.md">
+              Privacy policy
+            </a>
           </div>
           <div className={"footer_list"}>
             <div>Company</div>
