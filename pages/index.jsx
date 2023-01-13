@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
@@ -12,6 +11,13 @@ const World = dynamic(import("../components/world"), {
 export default function Index() {
   const icons = useRecoilValue(iconsState);
   const links = ["About", "Features", "Roadmap", "Community", "FAQ"];
+  const titleToLinkMap = {
+    About: "/",
+    Features: "/",
+    Roadmap: "https://github.com/orgs/Ivy-Apps/projects/1/views/1",
+    Community: "https://t.me/+ETavgioAvWg4NThk",
+    FAQ: "/",
+  };
   const perks = [
     {
       icon: icons["lock_icon"](),
@@ -59,14 +65,22 @@ export default function Index() {
         </div>
         <div className={styles.links}>
           {links.map((e) => (
-            <Link href={"/"} key={e}>
+            <Link href={titleToLinkMap[e]} key={e}>
               <a>{e}</a>
             </Link>
           ))}
         </div>
         <div className={styles.cta}>
-          <button>Donate</button>
-          <a href="https://play.google.com/store/apps/details?id=com.ivy.wallet&hl=en&gl=US" target="_blank">
+          <button>
+            <a href="https://github.com/sponsors/Ivy-Apps" target="_blank">
+              Donate
+            </a>
+          </button>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ivy.wallet&hl=en&gl=US"
+            target="_blank"
+          >
             <button>
               Try Ivy Wallet{" "}
               <svg
@@ -121,7 +135,10 @@ export default function Index() {
             good old spreadsheet for managing your personal finance.
           </span>
           <div className={styles.heading_buttons}>
-            <a href="https://play.google.com/store/apps/details?id=com.ivy.wallet&hl=en&gl=US" target="_blank">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ivy.wallet&hl=en&gl=US"
+              target="_blank"
+            >
               <button>
                 Try Ivy Wallet{" "}
                 <svg
@@ -143,7 +160,12 @@ export default function Index() {
                 </svg>
               </button>
             </a>
-            <button>Explore Ivy Wallet</button>
+
+            <button>
+              <a href="https://github.com/Ivy-Apps/ivy-wallet">
+                Explore our Github
+              </a>
+            </button>
           </div>
         </div>
       </main>
@@ -180,10 +202,12 @@ export default function Index() {
         <div className={"list_container"}>
           <div className={"footer_list"}>
             <div>Product</div>
-            <a>Featuers</a>
-            <a>Roadmap</a>
-            <a>Pholisophu</a>
-            <a>Journeys</a>
+            <a>Features</a>
+            <a href="https://github.com/orgs/Ivy-Apps/projects/1/views/1">
+              Roadmap
+            </a>
+            <a>Philosophy</a>
+            <a>Journey</a>
             <a>Error Reporting</a>
           </div>
           <div className={"footer_list"}>
@@ -202,21 +226,21 @@ export default function Index() {
           </div>
           <div className={"footer_list"}>
             <div>Support</div>
-            <a>Github Repo</a>
+            <a href="https://github.com/Ivy-Apps/ivy-wallet">Github</a>
             <a>FAQs</a>
-            <a>Community</a>
+            <a href="https://t.me/+ETavgioAvWg4NThk">Community</a>
           </div>
         </div>
         <div className="copyright">
           <div>
-            <a>
+            <a href="https://github.com/Ivy-Apps/ivy-wallet">
               <i className="ri-github-fill"></i>
+            </a>
+            <a href="https://t.me/c/1647280565/8186">
+              <i className="ri-telegram-fill"></i>
             </a>
             <a>
               <i className="ri-twitter-fill"></i>
-            </a>
-            <a>
-              <i className="ri-discord-fill"></i>
             </a>
           </div>
           Copyright &copy; {new Date().getFullYear()} Ivy Apps
