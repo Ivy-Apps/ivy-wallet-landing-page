@@ -47,15 +47,19 @@
         border-radius: 15px;
         background: rgba(170, 66, 255, 0.1);
         color: rgb(99, 224, 194);
-        font-size: 18px;
-        font-weight: 600;
         width: fit-content;
         display: flex;
         align-items: center;
         margin: 0 auto;
         margin-bottom: 50px;
-        svg {
-          margin-left: 5px;
+        a {
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          font-weight: 600;
+          svg {
+            margin-left: 5px;
+          }
         }
       }
       .heading_buttons {
@@ -87,10 +91,9 @@
 .logo {
   flex: 1;
   div {
-    width: calc(30px * 4.09302326);
-    height: 30px;
+    width: 72px;
+    height: 60px;
     background: url("/logo.svg");
-    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     span {
@@ -125,16 +128,17 @@
   justify-content: flex-end;
   flex: 1;
   button {
-    &:nth-child(1) {
-      margin-right: 10px;
-      background: none;
-      &:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
+    margin-right: 10px;
+    background: none;
+     &:hover { 
+      background: rgba(255, 255, 255, 0.1);
     }
-    &:nth-child(2) {
+  }
+  a {
+    button {
       background: #63e0c2;
       &:hover {
+        background: #63e0c2;
         box-shadow: 0px 0px 150px #63e0c2;
       }
     }
