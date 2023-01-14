@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -54,7 +55,12 @@ export default function Index() {
       <header>
         <div className={styles.logo}>
           <div>
-            <span>Beta</span>
+            <Link href="/">
+              <a>
+                <Image src="/logo.svg" alt="Ivy Logo" width="60" height="60" />
+              </a>
+            </Link>
+            <span className={styles.beta_span}>Beta</span>
           </div>
         </div>
         <div className={styles.links}>
