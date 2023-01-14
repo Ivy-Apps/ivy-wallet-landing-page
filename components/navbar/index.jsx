@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./navbar.module.scss";
 import RightArrow from "../../state/icons/rightArrow"
 
@@ -9,7 +8,8 @@ const Logo = () => {
       <div>
         <Link href="/">
           <a>
-            <Image src="/logo.svg" alt="Ivy Logo" width="60" height="60" />
+            {/*eslint-disable-next-line @next/next/no-img-element*/}
+            <img src="/logo.svg" alt="Ivy Logo" width="60" height="60" />
           </a>
         </Link>
         <span className={styles.beta_span}>Beta</span>
