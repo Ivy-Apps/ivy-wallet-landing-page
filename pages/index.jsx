@@ -10,7 +10,7 @@ const World = dynamic(import("../components/world"), {
   ssr: false,
 });
 
-export default function Index() {
+const Index = () => {
   const icons = useRecoilValue(iconsState);
   const links = ["About", "Features", "Roadmap", "Community", "FAQ"];
   const perks = [
@@ -231,3 +231,5 @@ export default function Index() {
     </div>
   );
 }
+
+export default Index;
