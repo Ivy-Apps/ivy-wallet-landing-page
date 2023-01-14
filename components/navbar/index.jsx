@@ -9,7 +9,7 @@ const Logo = () => {
         <Link href="/">
           <a>
             {/*eslint-disable-next-line @next/next/no-img-element*/}
-            <img src="/logo.svg" alt="Ivy Logo" width="60" height="60" />
+            <img src="./logo.svg" alt="Ivy Logo" width="60" height="60" />
           </a>
         </Link>
         <span className={styles.beta_span}>Beta</span>
