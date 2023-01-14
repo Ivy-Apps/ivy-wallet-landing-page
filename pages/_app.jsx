@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-navbutton-color" content="#000000" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
+        <link rel="icon" type="image/png" href="./icon.png" />
+        <link rel="shortcut icon" href="./favicon.ico" />
       </Head>
       <Component {...pageProps} />
     </RecoilRoot>

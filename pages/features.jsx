@@ -62,7 +62,6 @@ export default function Features() {
           content="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance.
           Track your expenses, fast and on-the-go! ⚡ Discover powerful insights about your spending."
         />
-        <link rel="icon" href="/icon.png" />
       </Head>
 
       <Navbar links={links} titleToLinkMap={titleToLinkMap} />
