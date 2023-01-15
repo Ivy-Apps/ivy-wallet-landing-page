@@ -1,3 +1,4 @@
+import { Container } from "../components/container";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -38,7 +39,7 @@ const Index = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <Container>
       <Head>
         <title>Ivy Wallet — Tracking Finances Done Right</title>
         <meta
@@ -111,7 +112,7 @@ const Index = () => {
           ))}
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
