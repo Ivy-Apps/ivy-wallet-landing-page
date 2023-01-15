@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./navbar.module.scss";
-import RightArrow from "../../state/icons/rightArrow"
+import { iconsState } from "../../state";
+import { useRecoilValue } from "recoil";
 
 const _links = ["About", "Features", "Roadmap", "Community", "FAQ"];
 const _titleToLinkMap = {
@@ -39,14 +40,16 @@ const LinksBar = ({ links, titleToLinkMap }) => {
   )
 }
 
-const ActionButtons = () => {
+const ActionButtons = () => { 
+  const icons = useRecoilValue(iconsState);
+
   return(
     <div className={styles.cta}>
       <button>Donate</button>
         <a href="https://play.google.com/store/apps/details?id=com.ivy.wallet&hl=en&gl=US" target="_blank" rel="noreferrer">
           <button>
             Try Ivy Wallet{" "}
-            <RightArrow />
+            {icons['right_arrow_icon']()}
         </button>
       </a>
     </div>
