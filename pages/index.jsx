@@ -1,5 +1,3 @@
-import { Navbar } from "../components/navbar";
-import { Footer } from "../components/footer";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -49,8 +47,6 @@ const Index = () => {
           Track your expenses, fast and on-the-go! ⚡ Discover powerful insights about your spending."
         />
       </Head>
-
-      <Navbar />
 
       <main className={styles.main}>
         <div className={styles.product}>
@@ -147,8 +143,6 @@ const Index = () => {
           ))}
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

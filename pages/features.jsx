@@ -1,5 +1,3 @@
-import { Navbar } from "../components/navbar";
-import { Footer } from "../components/footer";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
 import { useRecoilValue } from "recoil";
@@ -57,8 +55,6 @@ export default function Features() {
         />
       </Head>
 
-      <Navbar />
-
       <div className={styles.about}>
         <div className={styles.heading}>
           <div>Why Ivy Wallet?</div>
@@ -78,7 +74,6 @@ export default function Features() {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

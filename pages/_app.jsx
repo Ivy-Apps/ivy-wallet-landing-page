@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { Navbar } from "../components/navbar";
+import { Footer } from "../components/footer";
 import { RecoilRoot } from "recoil";
 
 import "../styles/globals.scss";
@@ -14,7 +16,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" type="image/png" href="./icon.png" />
         <link rel="shortcut icon" href="./favicon.ico" />
       </Head>
+      <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </RecoilRoot>
   );
 }
