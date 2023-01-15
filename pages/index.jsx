@@ -12,14 +12,6 @@ const World = dynamic(import("../components/world"), {
 
 const Index = () => {
   const icons = useRecoilValue(iconsState);
-  const links = ["About", "Features", "Roadmap", "Community", "FAQ"];
-  const titleToLinkMap = {
-    About: "/",
-    Features: "/features",
-    Roadmap: "https://github.com/orgs/Ivy-Apps/projects/1/views/1",
-    Community: "https://t.me/+ETavgioAvWg4NThk",
-    FAQ: "/",
-  };
   const perks = [
     {
       icon: icons["lock_icon"](),
@@ -58,7 +50,7 @@ const Index = () => {
         />
       </Head>
 
-      <Navbar links={links} titleToLinkMap={titleToLinkMap} />
+      <Navbar />
 
       <main className={styles.main}>
         <div className={styles.product}>

@@ -2,6 +2,15 @@ import Link from "next/link";
 import styles from "./navbar.module.scss";
 import RightArrow from "../../state/icons/rightArrow"
 
+const _links = ["About", "Features", "Roadmap", "Community", "FAQ"];
+const _titleToLinkMap = {
+  About: "/",
+  Features: "/features",
+  Roadmap: "https://github.com/orgs/Ivy-Apps/projects/1/views/1",
+  Community: "https://t.me/+ETavgioAvWg4NThk",
+  FAQ: "/",
+};
+
 const Logo = () => {
   return(
     <div className={styles.logo}>
@@ -44,11 +53,11 @@ const ActionButtons = () => {
   )
 }
 
-export const Navbar = ({ links = [], titleToLinkMap = [] }) => {
+export const Navbar = () => {
   return(
       <header className={styles.container}>
         <Logo />
-        <LinksBar links={links} titleToLinkMap={titleToLinkMap} />
+        <LinksBar links={_links} titleToLinkMap={_titleToLinkMap} />
         <ActionButtons />
       </header>
   )

@@ -7,14 +7,6 @@ import { iconsState } from "../state";
 
 export default function Features() {
   const icons = useRecoilValue(iconsState);
-  const links = ["About", "Features", "Roadmap", "Community", "FAQ"];
-  const titleToLinkMap = {
-    About: "/",
-    Features: "/",
-    Roadmap: "https://github.com/orgs/Ivy-Apps/projects/1/views/1",
-    Community: "https://t.me/+ETavgioAvWg4NThk",
-    FAQ: "/",
-  };
   const perks = [
     {
       icon: icons["lock_icon"](),
@@ -65,7 +57,7 @@ export default function Features() {
         />
       </Head>
 
-      <Navbar links={links} titleToLinkMap={titleToLinkMap} />
+      <Navbar />
 
       <div className={styles.about}>
         <div className={styles.heading}>
