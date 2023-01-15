@@ -1,0 +1,16 @@
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+  &:hover {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
