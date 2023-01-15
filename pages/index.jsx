@@ -1,4 +1,5 @@
 import { Navbar } from "../components/navbar";
+import { Footer } from "../components/footer";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -154,58 +155,8 @@ const Index = () => {
           ))}
         </div>
       </div>
-      <footer>
-        <div className={"list_container"}>
-          <div className={"footer_list"}>
-            <div>Product</div>
-            <a>Features</a>
-            <a href="https://github.com/orgs/Ivy-Apps/projects/1/views/1">
-              Roadmap
-            </a>
-            <a>Philosophy</a>
-            <a>Journey</a>
-            <a>Error Reporting</a>
-          </div>
-          <div className={"footer_list"}>
-            <div>About</div>
-            <a>Why Ivy?</a>
-            <a>Blog</a>
 
-            <a href="https://github.com/ILIYANGERMANOV/privacy-policies/blob/master/ivy-wallet-tc.md">
-              Terms of use
-            </a>
-            <a href="https://github.com/ILIYANGERMANOV/privacy-policies/blob/master/ivy-wallet-privacy-policy.md">
-              Privacy policy
-            </a>
-          </div>
-          <div className={"footer_list"}>
-            <div>Company</div>
-            <a>About</a>
-            <a>Updates</a>
-            <a>Sponsers</a>
-          </div>
-          <div className={"footer_list"}>
-            <div>Support</div>
-            <a href="https://github.com/Ivy-Apps/ivy-wallet">Github</a>
-            <a>FAQs</a>
-            <a href="https://t.me/+ETavgioAvWg4NThk">Community</a>
-          </div>
-        </div>
-        <div className="copyright">
-          <div>
-            <a href="https://github.com/Ivy-Apps/ivy-wallet">
-              <i className="ri-github-fill"></i>
-            </a>
-            <a href="https://t.me/c/1647280565/8186">
-              <i className="ri-telegram-fill"></i>
-            </a>
-            <a>
-              <i className="ri-twitter-fill"></i>
-            </a>
-          </div>
-          Copyright &copy; {new Date().getFullYear()} Ivy Apps
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

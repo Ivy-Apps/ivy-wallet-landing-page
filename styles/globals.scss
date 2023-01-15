@@ -38,45 +38,6 @@ button {
   }
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid rgba(255, 255, 255, 0.085);
-  .list_container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 100px 30px;
-    .footer_list {
-      display: flex;
-      flex-direction: column;
-      div {
-        font-size: 20px;
-        opacity: 0.58;
-      }
-      a {
-        margin-top: 15px;
-      }
-    }
-  }
-  .copyright {
-    margin: 100px auto;
-    margin-top: 0;
-    div {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 24px;
-      a {
-        &:nth-of-type(2) {
-          margin: 0 30px;
-        }
-      }
-    }
-  }
-}
-
 * {
   box-sizing: border-box;
   letter-spacing: -0.015em !important;
