@@ -1,4 +1,5 @@
 import styles from "./footer.module.scss";
+import Link from "next/link";
 
 const Sections = () => (    
   <div className={styles.list_container}>
@@ -17,12 +18,12 @@ const Sections = () => (
       <div>About</div>
       <a>Why Ivy?</a>
       <a>Blog</a>
-      <a href="https://github.com/ILIYANGERMANOV/privacy-policies/blob/master/ivy-wallet-tc.md">
+      <Link href="/terms-and-conditions">
         Terms of use
-      </a>
-      <a href="https://github.com/ILIYANGERMANOV/privacy-policies/blob/master/ivy-wallet-privacy-policy.md">
+      </Link>
+      <Link href="/privacy">
         Privacy policy
-      </a>
+      </Link>
     </div>
 
     <div className={styles.footer_list}>
