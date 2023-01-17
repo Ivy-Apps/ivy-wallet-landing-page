@@ -3,41 +3,53 @@ import Link from "next/link";
 
 const Sections = () => (    
   <div className={styles.list_container}>
-    <div className={styles.footer_list}>
-      <div>Product</div>
-      <a>Features</a>
-      <a href="https://github.com/orgs/Ivy-Apps/projects/1/views/1">
-        Roadmap
-      </a>
-      <a>Philosophy</a>
-      <a>Journey</a>
-      <a>Error Reporting</a>
+    <div className={styles.container_sublist}>
+      <div className={styles.list_item}>
+        <div>
+          <h3>Product</h3>
+          <a>Features</a>
+          <a href="https://github.com/orgs/Ivy-Apps/projects/1/views/1">
+            Roadmap
+          </a>
+          <a>Philosophy</a>
+          <a>Journey</a>
+          <a>Error Reporting</a>
+        </div>
+      </div>
+
+      <div className={styles.list_item}>
+        <div>
+          <h3>About</h3>
+          <a>Why Ivy?</a>
+          <a>Blog</a>
+          <Link href="/terms-and-conditions">
+            Terms of use
+          </Link>
+          <Link href="/privacy">
+            Privacy policy
+          </Link>
+        </div>
+      </div>
     </div>
 
-    <div className={styles.footer_list}>
-      <div>About</div>
-      <a>Why Ivy?</a>
-      <a>Blog</a>
-      <Link href="/terms-and-conditions">
-        Terms of use
-      </Link>
-      <Link href="/privacy">
-        Privacy policy
-      </Link>
-    </div>
+    <div className={styles.container_sublist}>
+      <div className={styles.list_item}>
+        <div>
+          <h3>Company</h3>
+          <a>About</a>
+          <a>Updates</a>
+          <a>Sponsers</a>
+        </div>
+      </div>
 
-    <div className={styles.footer_list}>
-      <div>Company</div>
-      <a>About</a>
-      <a>Updates</a>
-      <a>Sponsers</a>
-    </div>
-
-    <div className={styles.footer_list}>
-      <div>Support</div>
-      <a href="https://github.com/Ivy-Apps/ivy-wallet">Github</a>
-      <a>FAQs</a>
-      <a href="https://t.me/+ETavgioAvWg4NThk">Community</a>
+      <div className={styles.list_item}>
+        <div>
+          <h3>Support</h3>
+          <a href="https://github.com/Ivy-Apps/ivy-wallet">Github</a>
+          <a>FAQs</a>
+          <a href="https://t.me/+ETavgioAvWg4NThk">Community</a>
+        </div>
+      </div>
     </div>
   </div>
 )

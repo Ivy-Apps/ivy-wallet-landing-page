@@ -6,6 +6,8 @@
 
 .list_container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: space-between;
   width: 100%;
   max-width: 1300px;
@@ -13,15 +15,31 @@
   padding: 100px 30px;
 }
 
-.footer_list {
+.container_sublist {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.list_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 216px;
   div {
-    font-size: 20px;
-    opacity: 0.58;
-  }
-  a {
-    margin-top: 15px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      font-size: 20px;
+      opacity: 0.58;
+    }
+    a {
+      margin-top: 15px;
+    }
   }
 }
 
