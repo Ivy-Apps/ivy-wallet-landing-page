@@ -89,7 +89,6 @@ const Index = () => {
           pointerEvents: "none",
           height: 500,
           bottom: -100,
-          right: -30,
         }}
       >
         <World />
