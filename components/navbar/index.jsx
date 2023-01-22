@@ -1,7 +1,9 @@
+import { useState, useRef } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.scss";
 import { iconsState } from "../../state";
 import { useRecoilValue } from "recoil";
+import { useOutside } from "../../utils/useOutside"
 
 const _links = ["About", "Features", "Roadmap", "Community", "FAQ"];
 const _titleToLinkMap = {
@@ -46,12 +48,52 @@ const ActionButtons = () => {
   return(
     <div className={styles.cta}>
       <button>Donate</button>
-        <a href="https://play.google.com/store/apps/details?id=com.ivy.wallet&hl=en&gl=US" target="_blank" rel="noreferrer">
-          <button>
-            Try Ivy Wallet{" "}
-            {icons['right_arrow_icon']()}
+      <a href="https://play.google.com/store/apps/details?id=com.ivy.wallet&hl=en&gl=US" target="_blank" rel="noreferrer">
+        <button>
+          Try Ivy Wallet{" "}
+          {icons['right_arrow_icon']()}
         </button>
       </a>
+    </div>
+  )
+}
+
+const DropdownMenu = ({ links, titleToLinkMap }) => {
+  const buttonRef = useRef();
+  const listRef = useRef();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    const buttonNode = buttonRef.current;
+    const listNode = listRef.current;
+    
+    if (menuOpen) {
+      buttonNode.classList.add(styles.active_select);
+      listNode.classList.add(styles.menu_open);
+    } else {
+      buttonNode.classList.remove(styles.active_select);
+      listNode.classList.remove(styles.menu_open);
+    }
+
+    setMenuOpen(!menuOpen);
+  }
+
+  useOutside(buttonRef, toggleMenu);
+
+  return(
+    <div className={styles.dropdown}>
+      <div onClick={toggleMenu}>
+        <button ref={buttonRef} className={styles.select}>Menu</button>
+      </div>
+      <ul ref={listRef} className={styles.menu}>
+        {links.map((e) => (
+          <li key={e}>
+            <Link href={titleToLinkMap[e]}>
+              <a>{e}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
@@ -60,8 +102,9 @@ export const Navbar = () => {
   return(
       <header className={styles.container}>
         <Logo />
-        <LinksBar links={_links} titleToLinkMap={_titleToLinkMap} />
+        <LinksBar links={_links} titleToLinkMap={_titleToLinkMap}/>
         <ActionButtons />
+        <DropdownMenu links={_links} titleToLinkMap={_titleToLinkMap}/>
       </header>
   )
 };

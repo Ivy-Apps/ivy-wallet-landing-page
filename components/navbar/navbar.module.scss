@@ -1,3 +1,5 @@
+@import "../../styles/breakpoint.scss";
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -46,6 +48,9 @@
       background: rgba(255, 255, 255, 0.1);
     }
   }
+  @include breakpoint(lg, max) {
+    display: none;
+  }
 }
 
 .cta {
@@ -68,4 +73,61 @@
       }
     }
   }
+  @include breakpoint(lg, max) {
+    display: none;
+  }
+}
+
+.dropdown {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  box-sizing: border-box;
+  .select {
+    margin-right: 10px;
+    background: none;
+     &:hover { 
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+  .active_select {
+    @extend .select; 
+    background: rgba(255, 255, 255, 0.1);
+  }
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
+
+.menu {
+  list-style: none;
+  position: absolute;
+  padding: 0.2em 0.5em;
+  display: block;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.94);
+  border-radius: 0.5em;
+  top: 3em;
+  margin-left: 16px;
+  opacity: 0;
+  transition: 0.2s;
+  z-index: 6;
+  li {
+    border-radius: 0.5em;
+    width: 100%;
+    a {
+      padding: 0.7em 0.7em;
+      margin: 0.3em 0; 
+      width: 100%;
+      display: block;
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.menu_open {
+  opacity: 1;
 }
