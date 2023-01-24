@@ -16,7 +16,7 @@ const Index = () => {
       icon: icons["lock_icon"](),
       heading: "Completely Open Source",
       paragraph:
-        "We believe that people (not corporations) can create innovative, open-source, and free software that can make the world a better place.",
+        "We believe that people (not only corporations) can create innovative, open-source, and free software that can make the world a better place.",
     },
     {
       icon: icons["users_icon"](),
@@ -28,20 +28,20 @@ const Index = () => {
       icon: icons["chart_icon"](),
       heading: "Finances Easy to Read",
       paragraph:
-        "Our Best in class design, coupled with a very fast and responsive codebase makes the app very easy and quick to use.",
+        "Our innovative design, coupled with a fast and responsive codebase makes the app easy and quick to use.",
     },
     {
       icon: icons["wallet_icon"](),
-      heading: "Completely Free",
+      heading: "Completely Free*",
       paragraph:
-        "There are no hidden fees or charges - there is nothing to pay to use the app. We currenly run on donation model.",
+        "There are no hidden fees or charges - there is nothing* to pay to use the app. We currenly run on donation model.\n\n*this may change in the future",
     },
   ];
 
   return (
     <Container>
       <Head>
-        <title>Ivy Wallet — Tracking Finances Done Right</title>
+        <title>Ivy Wallet: money manager</title>
         <meta
           name="description"
           content="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance.

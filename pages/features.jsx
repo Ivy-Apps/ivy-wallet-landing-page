@@ -11,7 +11,7 @@ export default function Features() {
       icon: icons["lock_icon"](),
       heading: "Completely Open Source",
       paragraph:
-        "We believe that people (not corporations) can create innovative, open-source, and free software that can make the world a better place.",
+        "We believe that people (not only corporations) can create innovative, open-source, and free software that can make the world a better place.",
     },
     {
       icon: icons["users_icon"](),
@@ -29,26 +29,26 @@ export default function Features() {
       icon: icons["wallet_icon"](),
       heading: "Multiple Accounts ",
       paragraph:
-        "Track multiple bank accounts (including crypto ones) in one place. Record incomes, expenses, and transfers between them to efficiently manage your money.",
+        "Manually track multiple bank accounts (including crypto ones) in one place. Record incomes, expenses, and transfers between them to efficiently manage your money.",
     },
     {
       icon: icons["users_icon"](),
       heading: "Community Driven",
       paragraph:
-        "Ivy Wallet is fully community driven. We are open to any suggestions and feedback from the community.",
+        "Ivy Wallet respects its users and community. We are open to any suggestions and feedback from the community.",
     },
     {
       icon: icons["wallet_icon"](),
       heading: "Multi-currency Support",
       paragraph:
-        "Ivy Wallet supports 180+ currencies including all international (USD, EUR, GBP, etc) ones and the top 20 cryptocurrencies (e.g. BTC, ETH, ADA, SOL) to manage all of your assets with one money manager app.",
+        "Ivy Wallet supports multiple currencies including international (USD, EUR, GBP, etc) ones and the top cryptocurrencies (like BTC, ETH, ADA, SOL) to help you manage all of your assets with one money manager app.",
     },
   ];
 
   return (
     <Container>
       <Head>
-        <title>Ivy Wallet — Tracking Finances Done Right</title>
+        <title>Ivy Wallet: money</title>
         <meta
           name="description"
           content="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance.
@@ -60,8 +60,8 @@ export default function Features() {
         <div className={styles.heading}>
           <div>Why Ivy Wallet?</div>
           <div>
-            Discover, explore and visualize data to better understand your
-            finances.
+            Track your income and spending from your phone with ease to better
+            understanding your personal finance.
           </div>
         </div>
         <p></p>

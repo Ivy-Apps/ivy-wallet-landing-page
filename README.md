@@ -1,9 +1,15 @@
-###Landing page for IVY Wallet
-
+# Landing page for IVY Wallet
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+You can visit the webpage at **[https://ivy-apps.github.io/ivy-wallet-landing-page/](https://ivy-apps.github.io/ivy-wallet-landing-page/)**.
+
 ## Getting Started
+
+Install Next.js:
+```
+npm install next
+```
 
 First, run the development server:
 
