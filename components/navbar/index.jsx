@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.scss";
 import { iconsState } from "../../state";
@@ -63,10 +63,19 @@ const DropdownMenu = ({ links, titleToLinkMap }) => {
   const listRef = useRef();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = ({onlyClose = false}) => {
+    if (!onlyClose) {
+      setMenuOpen(!menuOpen);
+    } else {
+      setMenuOpen(false);
+    }
+
+  }
+
+  useEffect(() => {
     const buttonNode = buttonRef.current;
     const listNode = listRef.current;
-    
+
     if (menuOpen) {
       buttonNode.classList.add(styles.active_select);
       listNode.classList.add(styles.menu_open);
@@ -74,11 +83,9 @@ const DropdownMenu = ({ links, titleToLinkMap }) => {
       buttonNode.classList.remove(styles.active_select);
       listNode.classList.remove(styles.menu_open);
     }
+  }, [menuOpen])
 
-    setMenuOpen(!menuOpen);
-  }
-
-  useOutside(buttonRef, toggleMenu);
+  useOutside(buttonRef, () => toggleMenu({onlyClose: true}));
 
   return(
     <div className={styles.dropdown}>
