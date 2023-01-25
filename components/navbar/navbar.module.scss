@@ -14,6 +14,9 @@
   z-index: 5;
   backdrop-filter: blur(8px);
   background-color: rgba(0, 0, 0, 0.85);
+  @include breakpoint(lg, max) {
+    padding: 16px;
+  }
 }
 
 .logo {
@@ -22,6 +25,10 @@
     width: 72px;
     height: 60px;
     position: relative;
+    @include breakpoint(lg, max) {
+      height: 48px;
+      width: 60px;
+    }
   }
 }
 
@@ -33,6 +40,9 @@
   background: #63e0c2;
   border-radius: 12px;
   font-size: 16px;
+  @include breakpoint(lg, max) {
+    top: -2;
+  }
 }
 
 .links {
@@ -111,6 +121,7 @@
   top: 3em;
   margin-left: 16px;
   opacity: 0;
+  pointer-events: none;
   transition: 0.2s;
   z-index: 6;
   li {
@@ -129,5 +140,6 @@
 }
 
 .menu_open {
+  pointer-events: all;
   opacity: 1;
 }
