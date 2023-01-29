@@ -25,7 +25,7 @@ const LinkElement = ({ title, src, external = false}) => {
   if (external) {
     return(
       <a href={src} target="_blank" rel="noreferrer"> 
-        {title} <i className="ri-external-link-line" />
+        {title}<i className="ri-external-link-line" />
       </a>
     )
   }
