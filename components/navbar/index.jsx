@@ -67,6 +67,7 @@ const ActionButtons = () => {
 }
 
 const DropdownMenu = () => {
+  const elementRef = useRef();
   const buttonRef = useRef();
   const listRef = useRef();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -93,10 +94,10 @@ const DropdownMenu = () => {
     }
   }, [menuOpen])
 
-  useOutside(buttonRef, () => toggleMenu({onlyClose: true}));
+  useOutside(elementRef, () => toggleMenu({onlyClose: true}));
 
   return(
-    <div className={styles.dropdown}>
+    <div ref={elementRef} className={styles.dropdown}>
       <div onClick={toggleMenu}>
         <button ref={buttonRef} className={styles.select}>Menu</button>
       </div>
