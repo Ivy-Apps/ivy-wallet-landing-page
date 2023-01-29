@@ -1,4 +1,5 @@
 import { Container } from "../components/container";
+import { BaseHead } from "../components/BaseHead";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
 import { useRecoilValue } from "recoil";
@@ -48,11 +49,9 @@ export default function Features() {
   return (
     <Container>
       <Head>
-        <title>Ivy Wallet: money</title>
-        <meta
-          name="description"
-          content="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance.
-          Track your expenses, fast and on-the-go! ⚡ Discover powerful insights about your spending."
+        <BaseHead 
+          title="Ivy Wallet: Money Manager - Features" 
+          description="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance. Track your expenses, fast and on-the-go! ⚡ Discover powerful insights about your spending."
         />
       </Head>
 
