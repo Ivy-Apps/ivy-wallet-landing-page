@@ -53,7 +53,7 @@ const Index = () => {
               {icons["right_arrow_icon"]()}
             </a>
           </div>
-          Track your expenses, fast and on-the-go! ⚡
+          <h1>Track your expenses, fast and on-the-go! ⚡</h1>
           <span>
             Imagine Ivy Wallet as a manual expense tracker that will replace the
             good old spreadsheet for managing your personal finance.
