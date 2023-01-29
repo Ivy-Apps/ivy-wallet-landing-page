@@ -1,13 +1,8 @@
 import { Container } from "../components/container";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import { useRecoilValue } from "recoil";
 import { iconsState } from "../state";
-
-const World = dynamic(import("../components/world"), {
-  ssr: false,
-});
 
 const Index = () => {
   const icons = useRecoilValue(iconsState);
@@ -83,16 +78,7 @@ const Index = () => {
           </div>
         </div>
       </main>
-      <div
-        style={{
-          position: "relative",
-          pointerEvents: "none",
-          height: 500,
-          bottom: -100,
-        }}
-      >
-        <World />
-      </div>
+
       <div className={styles.about}>
         <div className={styles.heading}>
           <div>Why Ivy Wallet?</div>

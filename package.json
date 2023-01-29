@@ -12,15 +12,12 @@
     "next": "^12.3.4",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-globe.gl": "^2.22.1",
     "react-markdown": "^8.0.4",
     "recharts": "^2.1.12",
     "recoil": "^0.7.4",
     "remark-gfm": "^3.0.1",
     "remixicon": "^2.5.0",
-    "sass": "^1.53.0",
-    "three": "^0.142.0",
-    "topojson-client": "^3.1.0"
+    "sass": "^1.53.0"
   },
   "devDependencies": {
     "eslint": "8.16.0",
