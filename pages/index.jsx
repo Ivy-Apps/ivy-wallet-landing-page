@@ -1,33 +1,31 @@
 import { Container } from "../components/container";
 import { BaseHead } from "../components/BaseHead";
+import { LockIcon, UsersIcon, ChartIcon, WalletIcon, RightArrowIcon } from "../components/icons";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
-import { useRecoilValue } from "recoil";
-import { iconsState } from "../state";
 
 const Index = () => {
-  const icons = useRecoilValue(iconsState);
   const perks = [
     {
-      icon: icons["lock_icon"](),
+      icon: <LockIcon />,
       heading: "Completely Open Source",
       paragraph:
         "We believe that people (not only corporations) can create innovative, open-source, and free software that can make the world a better place.",
     },
     {
-      icon: icons["users_icon"](),
+      icon: <UsersIcon />,
       heading: "Easy to set-up and use",
       paragraph:
         "Ivy Wallet's biggest advantage is its UI/UX, simplicity, and customization which was recognized in the Top/Best Android App in 2021/2022 charts 10+ times by the YouTube tech community.",
     },
     {
-      icon: icons["chart_icon"](),
+      icon: <ChartIcon />,
       heading: "Finances Easy to Read",
       paragraph:
         "Our innovative design, coupled with a fast and responsive codebase makes the app easy and quick to use.",
     },
     {
-      icon: icons["wallet_icon"](),
+      icon: <WalletIcon />,
       heading: "Completely Free*",
       paragraph:
         "There are no hidden fees or charges - there is nothing* to pay to use the app. We currenly run on donation model.\n\n*this may change in the future",
@@ -49,7 +47,7 @@ const Index = () => {
             <a href="https://t.me/+ETavgioAvWg4NThk" target="_blank" rel="noreferrer">
 
               Join our telegram communinty for updates
-              {icons["right_arrow_icon"]()}
+              <RightArrowIcon />
             </a>
           </div>
           <h1>Track your expenses, fast and on-the-go! ⚡</h1>
@@ -65,7 +63,7 @@ const Index = () => {
             >
               <button>
                 Try Ivy Wallet{" "}
-                {icons["right_arrow_icon"]()}
+                <RightArrowIcon />
               </button>
             </a>
 

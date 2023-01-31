@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.scss";
-import { iconsState } from "../../state";
-import { useRecoilValue } from "recoil";
 import { useOutside } from "../../utils/useOutside"
+import { RightArrowIcon } from "../icons";
 
 const Logo = () => {
   return(
@@ -51,15 +50,13 @@ const LinksBar = () => {
 }
 
 const ActionButtons = () => { 
-  const icons = useRecoilValue(iconsState);
-
   return(
     <div className={styles.cta}>
       <button>Donate</button>
       <a href="https://play.google.com/store/apps/details?id=com.ivy.wallet&hl=en&gl=US" target="_blank" rel="noreferrer">
         <button>
           Try Ivy Wallet{" "}
-          {icons['right_arrow_icon']()}
+          <RightArrowIcon />
         </button>
       </a>
     </div>
