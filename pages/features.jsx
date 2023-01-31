@@ -1,6 +1,6 @@
 import { Container } from "../components/container";
 import { BaseHead } from "../components/BaseHead";
-import { LockIcon, UsersIcon, ChartIcon, WalletIcon, RightArrowIcon } from "../components/icons";
+import { LockIcon, UsersIcon, ChartIcon, WalletIcon } from "../components/icons";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
 
