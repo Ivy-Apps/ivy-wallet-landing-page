@@ -1,19 +1,23 @@
-import styles from "./footer.module.scss";
-import Link from "next/link";
+import styles from './footer.module.scss'
+import Link from 'next/link'
 
-const Sections = () => (    
+const Sections = () => (
   <div className={styles.list_container}>
     <div className={styles.container_sublist}>
       <div className={styles.list_item}>
         <div>
           <h3>Product</h3>
-          <a>Features</a>
+          <Link href="/features">Features</Link>
           <a href="https://github.com/orgs/Ivy-Apps/projects/1/views/1">
             Roadmap
           </a>
-          <a>Philosophy</a>
+          <a href="https://github.com/Ivy-Apps/ivy-wallet#ideology-earth_africa">
+            Philosophy
+          </a>
           <a>Journey</a>
-          <a>Error Reporting</a>
+          <a href="https://github.com/Ivy-Apps/ivy-wallet/issues">
+            Error Reporting
+          </a>
         </div>
       </div>
 
@@ -22,12 +26,8 @@ const Sections = () => (
           <h3>About</h3>
           <a>Why Ivy?</a>
           <a>Blog</a>
-          <Link href="/terms-and-conditions">
-            Terms of use
-          </Link>
-          <Link href="/privacy">
-            Privacy policy
-          </Link>
+          <Link href="/terms-and-conditions">Terms of use</Link>
+          <Link href="/privacy">Privacy policy</Link>
         </div>
       </div>
     </div>
@@ -36,9 +36,9 @@ const Sections = () => (
       <div className={styles.list_item}>
         <div>
           <h3>Company</h3>
-          <a>About</a>
-          <a>Updates</a>
-          <a>Sponsers</a>
+          <a href="https://github.com/Ivy-Apps">About</a>
+          <a href="https://github.com/Ivy-Apps/ivy-wallet/releases">Updates</a>
+          <a href="https://github.com/sponsors/Ivy-Apps">Sponsors</a>
         </div>
       </div>
 
@@ -69,13 +69,13 @@ const Copyright = () => (
     </div>
     Copyright &copy; {new Date().getFullYear()} Ivy Apps
   </div>
-);
+)
 
 export const Footer = () => {
-  return (   
+  return (
     <footer className={styles.footer}>
       <Sections />
-      <Copyright /> 
+      <Copyright />
     </footer>
   )
-};
+}
