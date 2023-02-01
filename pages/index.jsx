@@ -1,8 +1,6 @@
 import { Container } from "../components/container";
-import { BaseHead } from "../components/BaseHead";
 import { LockIcon, UsersIcon, ChartIcon, WalletIcon, RightArrowIcon } from "../components/icons";
 import styles from "../styles/index.module.scss";
-import Head from "next/head";
 
 const Index = () => {
   const perks = [
@@ -34,13 +32,6 @@ const Index = () => {
 
   return (
     <Container>
-      <Head>
-        <BaseHead 
-          title="Ivy Wallet: Money Manager" 
-          description="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance. Track your expenses, fast and on-the-go! ⚡ Discover powerful insights about your spending."
-        />
-      </Head>
-
       <main className={styles.main}>
         <div className={styles.product}>
           <div className={styles.news}>

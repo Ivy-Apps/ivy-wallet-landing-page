@@ -1,8 +1,6 @@
 import { Container } from "../components/container";
-import { BaseHead } from "../components/BaseHead";
 import { LockIcon, UsersIcon, ChartIcon, WalletIcon } from "../components/icons";
 import styles from "../styles/index.module.scss";
-import Head from "next/head";
 
 export default function Features() {
   const perks = [
@@ -45,14 +43,7 @@ export default function Features() {
   ];
 
   return (
-    <Container>
-      <Head>
-        <BaseHead 
-          title="Ivy Wallet: Money Manager - Features" 
-          description="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance. Track your expenses, fast and on-the-go! ⚡ Discover powerful insights about your spending."
-        />
-      </Head>
-
+    <Container title="Features">
       <div className={styles.about}>
         <div className={styles.heading}>
           <div>Why Ivy Wallet?</div>
