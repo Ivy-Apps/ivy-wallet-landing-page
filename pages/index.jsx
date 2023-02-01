@@ -1,37 +1,31 @@
 import { Container } from "../components/container";
+import { BaseHead } from "../components/BaseHead";
+import { LockIcon, UsersIcon, ChartIcon, WalletIcon, RightArrowIcon } from "../components/icons";
 import styles from "../styles/index.module.scss";
 import Head from "next/head";
-import dynamic from "next/dynamic";
-import { useRecoilValue } from "recoil";
-import { iconsState } from "../state";
-
-const World = dynamic(import("../components/world"), {
-  ssr: false,
-});
 
 const Index = () => {
-  const icons = useRecoilValue(iconsState);
   const perks = [
     {
-      icon: icons["lock_icon"](),
+      icon: <LockIcon />,
       heading: "Completely Open Source",
       paragraph:
         "We believe that people (not only corporations) can create innovative, open-source, and free software that can make the world a better place.",
     },
     {
-      icon: icons["users_icon"](),
+      icon: <UsersIcon />,
       heading: "Easy to set-up and use",
       paragraph:
         "Ivy Wallet's biggest advantage is its UI/UX, simplicity, and customization which was recognized in the Top/Best Android App in 2021/2022 charts 10+ times by the YouTube tech community.",
     },
     {
-      icon: icons["chart_icon"](),
+      icon: <ChartIcon />,
       heading: "Finances Easy to Read",
       paragraph:
         "Our innovative design, coupled with a fast and responsive codebase makes the app easy and quick to use.",
     },
     {
-      icon: icons["wallet_icon"](),
+      icon: <WalletIcon />,
       heading: "Completely Free*",
       paragraph:
         "There are no hidden fees or charges - there is nothing* to pay to use the app. We currenly run on donation model.\n\n*this may change in the future",
@@ -41,11 +35,9 @@ const Index = () => {
   return (
     <Container>
       <Head>
-        <title>Ivy Wallet: money manager</title>
-        <meta
-          name="description"
-          content="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance.
-          Track your expenses, fast and on-the-go! ⚡ Discover powerful insights about your spending."
+        <BaseHead 
+          title="Ivy Wallet: Money Manager" 
+          description="Imagine Ivy Wallet as a manual expense tracker that will replace the good old spreadsheet for managing your personal finance. Track your expenses, fast and on-the-go! ⚡ Discover powerful insights about your spending."
         />
       </Head>
 
@@ -55,10 +47,10 @@ const Index = () => {
             <a href="https://t.me/+ETavgioAvWg4NThk" target="_blank" rel="noreferrer">
 
               Join our telegram communinty for updates
-              {icons["right_arrow_icon"]()}
+              <RightArrowIcon />
             </a>
           </div>
-          Track your expenses, fast and on-the-go! ⚡
+          <h1>Track your expenses, fast and on-the-go! ⚡</h1>
           <span>
             Imagine Ivy Wallet as a manual expense tracker that will replace the
             good old spreadsheet for managing your personal finance.
@@ -71,7 +63,7 @@ const Index = () => {
             >
               <button>
                 Try Ivy Wallet{" "}
-                {icons["right_arrow_icon"]()}
+                <RightArrowIcon />
               </button>
             </a>
 
@@ -83,16 +75,7 @@ const Index = () => {
           </div>
         </div>
       </main>
-      <div
-        style={{
-          position: "relative",
-          pointerEvents: "none",
-          height: 500,
-          bottom: -100,
-        }}
-      >
-        <World />
-      </div>
+
       <div className={styles.about}>
         <div className={styles.heading}>
           <div>Why Ivy Wallet?</div>

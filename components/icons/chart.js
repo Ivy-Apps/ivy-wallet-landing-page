@@ -1,4 +1,4 @@
-export default function () {
+export default function ChartIcon() {
   return (
     <svg
       width="24"
@@ -30,4 +30,4 @@ export default function () {
       </g>
     </svg>
   );
-}
+};
