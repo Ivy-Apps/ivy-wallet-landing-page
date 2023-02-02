@@ -1,9 +1,12 @@
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
+import localFont from '@next/font/local'
 import Head from "next/head";
 
 import "../styles/globals.scss";
 import "remixicon/fonts/remixicon.css";
+
+const myFont = localFont({src: "../styles/fonts/satoshi.woff"})
 
 function MyApp({ Component, pageProps }) {
   const title="Ivy Wallet: Money Manager"; 
