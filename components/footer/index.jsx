@@ -7,9 +7,7 @@ const Sections = () => (
       <div className={styles.list_item}>
         <div>
           <h3>Product</h3>
-          <Link legacyBehavior href="/features">
-            Features
-          </Link>
+          <Link href="/features">Features</Link>
           <a href="https://github.com/orgs/Ivy-Apps/projects/1/views/1">
             Roadmap
           </a>
@@ -28,10 +26,8 @@ const Sections = () => (
           <h3>About</h3>
           <a>Why Ivy?</a>
           <a>Blog</a>
-          <Link legacyBehavior href="/terms-and-conditions">
-            Terms of use
-          </Link>
-          <Link legacyBehavior href="/privacy">Privacy policy</Link>
+          <Link href="/terms-and-conditions">Terms of use</Link>
+          <Link href="/privacy">Privacy policy</Link>
         </div>
       </div>
     </div>
