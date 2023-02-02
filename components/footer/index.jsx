@@ -7,7 +7,7 @@ const Sections = () => (
       <div className={styles.list_item}>
         <div>
           <h3>Product</h3>
-          <Link href="/features">Features</Link>
+          <Link legacyBehavior href="/features">Features</Link>
           <a href="https://github.com/orgs/Ivy-Apps/projects/1/views/1">
             Roadmap
           </a>
