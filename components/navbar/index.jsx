@@ -5,10 +5,10 @@ import { useOutside } from "../../utils/useOutside"
 import { RightArrowIcon } from "../icons";
 
 const Logo = () => {
-  return(
+  return (
     <div className={styles.logo}>
       <div>
-        <Link href="/">
+        <Link legacyBehavior href="/">
           <a>
             {/*eslint-disable-next-line @next/next/no-img-element*/}
             <img src="./logo.svg" alt="Ivy Logo" width="60" height="60" />
@@ -29,8 +29,8 @@ const LinkElement = ({ title, src, external = false}) => {
     )
   }
 
-  return(
-    <Link href={src}>
+  return (
+    <Link legacyBehavior href={src}>
       <a>{title}</a>
     </Link>
   )
